@@ -1,7 +1,7 @@
-# ASSAY-001 — REPORT · TypeSafe Jev (`jev-latest`) · calibration and type safety
+# ASSAY-001 — REPORT · TypeSafe Jev (`jev-latest`) · calibration and type safety · **CLEAR**
 
 **Run:** 2026-09-18 (Thursday), one pass per corpus, from a MacBook Pro in The Woodlands, TX. **Protocol frozen 2026-09-17** (`f8ce3f5b…a09b48`, commit `7d6b171`) and **Amendment 1** (`9cd8489`) before any query. **Amendment 2** (below) after the run, numbered and published, with both scorer results shown.
-**Auditor:** ASSAY / JourdanLabs · **Harness + this scoring:** Pan (Claude) · **Independent re-score required before publication:** a second party on a different base model must reproduce the numbers below from `raw/run/*/responses.jsonl` (Amendment 1.2). **Status: PRELIMINARY until that re-score lands.**
+**Auditor:** ASSAY / JourdanLabs · **Harness + this scoring:** Pan (Claude) · **Independent re-score required before publication:** a second party on a different base model must reproduce the numbers below from `raw/run/*/responses.jsonl` (Amendment 1.2). **Status: CLEAR — independently re-scored 2026-09-17T22:28Z by Tifa (Cursor / Grok) from the sealed raw responses with her own scorer (`477d86a7…8496e`), blind to Pan's numbers; every field matched exactly. Gate: `PAN-GATE-ASSAY-001-JEV-2026-09-18.md`.**
 **Cost:** 0.01 USD-ish (input at $0.042/MTok; output free). Every request and response: `raw/run/<corpus>/responses.jsonl`, sealed — banking77 `b5c96bc1…de978`, clinc150 `5f5c58b2…2834b`.
 
 ## Verdicts
@@ -74,7 +74,7 @@ The frozen C2 rule required `probabilities` to sum to 1 within 1e-3. Jev returns
 - **Smoke test:** 3 items per corpus were sent before the run to confirm connectivity (`raw/smoke/`), excluded from scoring, disclosed per Amendment 1.3.
 - **Contamination:** both corpora are public and old (2020, 2019). Accuracy is reported, not judged. Calibration on this distribution is what was measured.
 - **Latency** includes the public internet from central Texas; TypeSafe's "70–500 ms" is consistent with our median and not with our tails. Reported, not judged.
-- **Builder = scorer = Pan** for this preliminary. Not publishable alone (Amendment 1.2).
+- **Builder and first scorer = Pan (Claude); independent re-score = Tifa (Grok)** — Δ = 0 on every field. Amendment 1.2 satisfied.
 
 ## The limit
 A result applies to the artifacts and criteria examined — `jev-latest` on 2026-09-18, Choice questions with null option descriptions, these two corpora. It is not a statement about Jev on any other task, corpus, or day.

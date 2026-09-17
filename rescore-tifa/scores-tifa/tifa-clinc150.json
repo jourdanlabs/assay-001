@@ -1,0 +1,1 @@
+{"records": 5500, "non_200": 4, "scored": 5496, "violations": 0, "accuracy": 0.8812, "ECE": 0.0204, "MCE": 0.06, "Brier": 0.1846, "latency_median": 385.9, "latency_p95": 615.3, "latency_p99": 845.1, "argmax_exceptions": 1}
