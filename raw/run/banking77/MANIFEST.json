@@ -1,0 +1,13 @@
+{
+ "corpus": "banking77",
+ "n": 3080,
+ "labels": 77,
+ "model": "jev-latest",
+ "instructions": "Which banking intent does this customer message express? Choose exactly one.",
+ "started": "2026-09-17T15:57:50-0500",
+ "protocol_sha256": "f8ce3f5b72abd4f48b8da0efdd1769d12f5e111d6e905b298cf0251bc4a09b48",
+ "corpus_sha256": "53261da888122daf2d120d925458631d9619e15d82e56052e7a42e535ce32b63  corpus/banking77/categories.json\nd12d6e3bc4c3103966ae786dc435913c0c563dfa328f5a3646d0e62cfeeb474d  corpus/banking77/test.csv\ne28704a3c04f6b05c286ca2a8891bbf32c69c000dedfc5825d6e1713369b7a89  corpus/clinc150/README.md\n3e60e45b25bf86543aa5df8ba4fcc674114164e6184f0197690648c2908d0102  corpus/clinc150/test.parquet\nf790bcd186bae056b54bd014ddd4be127b1dd5eb8353b0e04fbf148e3aab4688  corpus/clinc150/intent_names.json\n",
+ "smoke": false,
+ "finished": "2026-09-17T16:03:04-0500",
+ "non_200": 0
+}
