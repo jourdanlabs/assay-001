@@ -1,0 +1,265 @@
+{
+ "corpus": "banking77",
+ "tag": "jev",
+ "records": 3080,
+ "non_200": 0,
+ "scored": 3080,
+ "labels": 77,
+ "C2_type_safety": {
+  "sum_tolerance": 0.02,
+  "violations": 0,
+  "pass": true,
+  "examples": []
+ },
+ "contract_choice_is_argmax": {
+  "violations": 2,
+  "examples": [
+   {
+    "id": "b77-0701",
+    "choice": "cancel_transfer",
+    "p_choice": 0.46,
+    "argmax": "failed_transfer",
+    "p_argmax": 0.47000000000000003
+   },
+   {
+    "id": "b77-1665",
+    "choice": "lost_or_stolen_card",
+    "p_choice": 0.47,
+    "argmax": "lost_or_stolen_phone",
+    "p_argmax": 0.48
+   }
+  ]
+ },
+ "probability_sums": {
+  "min": 0.99,
+  "max": 1.0,
+  "n_not_exactly_1_within_1e-3": 145
+ },
+ "C1_calibration": {
+  "accuracy": 0.7977,
+  "ECE_maxprob": 0.0936,
+  "MCE_maxprob": 0.86,
+  "Brier_multiclass": 0.3088,
+  "pass_ECE_le_0.05": false,
+  "reliability_bins_maxprob": [
+   {
+    "bin": "(0.0,0.1]",
+    "n": 0,
+    "conf": null,
+    "acc": null,
+    "gap": null
+   },
+   {
+    "bin": "(0.1,0.2]",
+    "n": 1,
+    "conf": 0.14,
+    "acc": 1.0,
+    "gap": 0.86
+   },
+   {
+    "bin": "(0.2,0.3]",
+    "n": 6,
+    "conf": 0.275,
+    "acc": 0.1667,
+    "gap": 0.1083
+   },
+   {
+    "bin": "(0.3,0.4]",
+    "n": 40,
+    "conf": 0.3668,
+    "acc": 0.2,
+    "gap": 0.1668
+   },
+   {
+    "bin": "(0.4,0.5]",
+    "n": 92,
+    "conf": 0.4652,
+    "acc": 0.337,
+    "gap": 0.1283
+   },
+   {
+    "bin": "(0.5,0.6]",
+    "n": 176,
+    "conf": 0.5526,
+    "acc": 0.358,
+    "gap": 0.1946
+   },
+   {
+    "bin": "(0.6,0.7]",
+    "n": 181,
+    "conf": 0.654,
+    "acc": 0.5083,
+    "gap": 0.1457
+   },
+   {
+    "bin": "(0.7,0.8]",
+    "n": 206,
+    "conf": 0.755,
+    "acc": 0.5874,
+    "gap": 0.1677
+   },
+   {
+    "bin": "(0.8,0.9]",
+    "n": 249,
+    "conf": 0.8614,
+    "acc": 0.6667,
+    "gap": 0.1947
+   },
+   {
+    "bin": "(0.9,1.0]",
+    "n": 2129,
+    "conf": 0.9857,
+    "acc": 0.9272,
+    "gap": 0.0585
+   }
+  ],
+  "confidence_field": {
+   "ECE": 0.088,
+   "MCE": 0.88,
+   "acc_by_decile": [
+    {
+     "decile": 1,
+     "n": 308,
+     "conf_mean": 0.4784,
+     "acc": 0.3344
+    },
+    {
+     "decile": 2,
+     "n": 308,
+     "conf_mean": 0.6713,
+     "acc": 0.5422
+    },
+    {
+     "decile": 3,
+     "n": 308,
+     "conf_mean": 0.8269,
+     "acc": 0.6396
+    },
+    {
+     "decile": 4,
+     "n": 308,
+     "conf_mean": 0.9245,
+     "acc": 0.7955
+    },
+    {
+     "decile": 5,
+     "n": 308,
+     "conf_mean": 0.9664,
+     "acc": 0.8604
+    },
+    {
+     "decile": 6,
+     "n": 308,
+     "conf_mean": 0.9869,
+     "acc": 0.9253
+    },
+    {
+     "decile": 7,
+     "n": 308,
+     "conf_mean": 0.9975,
+     "acc": 0.9513
+    },
+    {
+     "decile": 8,
+     "n": 308,
+     "conf_mean": 1.0,
+     "acc": 0.9838
+    },
+    {
+     "decile": 9,
+     "n": 308,
+     "conf_mean": 1.0,
+     "acc": 0.9481
+    },
+    {
+     "decile": 10,
+     "n": 308,
+     "conf_mean": 1.0,
+     "acc": 0.9968
+    }
+   ],
+   "monotone_nondecreasing": false,
+   "bins": [
+    {
+     "bin": "(0.0,0.1]",
+     "n": 0,
+     "conf": null,
+     "acc": null,
+     "gap": null
+    },
+    {
+     "bin": "(0.1,0.2]",
+     "n": 1,
+     "conf": 0.12,
+     "acc": 1.0,
+     "gap": 0.88
+    },
+    {
+     "bin": "(0.2,0.3]",
+     "n": 14,
+     "conf": 0.2786,
+     "acc": 0.1429,
+     "gap": 0.1357
+    },
+    {
+     "bin": "(0.3,0.4]",
+     "n": 43,
+     "conf": 0.3695,
+     "acc": 0.2791,
+     "gap": 0.0905
+    },
+    {
+     "bin": "(0.4,0.5]",
+     "n": 108,
+     "conf": 0.4656,
+     "acc": 0.2963,
+     "gap": 0.1693
+    },
+    {
+     "bin": "(0.5,0.6]",
+     "n": 175,
+     "conf": 0.5533,
+     "acc": 0.3714,
+     "gap": 0.1818
+    },
+    {
+     "bin": "(0.6,0.7]",
+     "n": 177,
+     "conf": 0.6542,
+     "acc": 0.5254,
+     "gap": 0.1288
+    },
+    {
+     "bin": "(0.7,0.8]",
+     "n": 201,
+     "conf": 0.753,
+     "acc": 0.607,
+     "gap": 0.146
+    },
+    {
+     "bin": "(0.8,0.9]",
+     "n": 271,
+     "conf": 0.863,
+     "acc": 0.7011,
+     "gap": 0.1618
+    },
+    {
+     "bin": "(0.9,1.0]",
+     "n": 2090,
+     "conf": 0.9849,
+     "acc": 0.9282,
+     "gap": 0.0566
+    }
+   ]
+  }
+ },
+ "C3_latency_ms": {
+  "n": 3080,
+  "median": 382.3,
+  "p95": 553.7,
+  "p99": 852.1,
+  "min": 315.4,
+  "max": 1599.5,
+  "note": "observed end-to-end from Plano, TX; includes network"
+ }
+}

@@ -1,0 +1,327 @@
+{
+ "corpus": "clinc150",
+ "tag": "jev-frozen",
+ "records": 5500,
+ "non_200": 4,
+ "scored": 5128,
+ "labels": 151,
+ "C2_type_safety": {
+  "sum_tolerance": 0.001,
+  "violations": 368,
+  "pass": false,
+  "examples": [
+   {
+    "id": "c150-0065",
+    "violations": [
+     "probabilities sum=0.99000"
+    ]
+   },
+   {
+    "id": "c150-0112",
+    "violations": [
+     "probabilities sum=0.99000"
+    ]
+   },
+   {
+    "id": "c150-0172",
+    "violations": [
+     "probabilities sum=0.99000"
+    ]
+   },
+   {
+    "id": "c150-0222",
+    "violations": [
+     "probabilities sum=0.99000"
+    ]
+   },
+   {
+    "id": "c150-0223",
+    "violations": [
+     "probabilities sum=0.99000"
+    ]
+   },
+   {
+    "id": "c150-0263",
+    "violations": [
+     "probabilities sum=0.99000"
+    ]
+   },
+   {
+    "id": "c150-0292",
+    "violations": [
+     "probabilities sum=0.99000"
+    ]
+   },
+   {
+    "id": "c150-0355",
+    "violations": [
+     "probabilities sum=0.99000"
+    ]
+   },
+   {
+    "id": "c150-0361",
+    "violations": [
+     "probabilities sum=0.99000"
+    ]
+   },
+   {
+    "id": "c150-0413",
+    "violations": [
+     "probabilities sum=0.99000"
+    ]
+   }
+  ]
+ },
+ "contract_choice_is_argmax": {
+  "violations": 1,
+  "examples": [
+   {
+    "id": "c150-5151",
+    "choice": "oos",
+    "p_choice": 0.48,
+    "argmax": "taxes",
+    "p_argmax": 0.49
+   }
+  ]
+ },
+ "probability_sums": {
+  "min": 0.99,
+  "max": 1.0,
+  "n_not_exactly_1_within_1e-3": 368
+ },
+ "C1_calibration": {
+  "accuracy": 0.8943,
+  "ECE_maxprob": 0.0209,
+  "MCE_maxprob": 0.215,
+  "Brier_multiclass": 0.1673,
+  "pass_ECE_le_0.05": true,
+  "reliability_bins_maxprob": [
+   {
+    "bin": "(0.0,0.1]",
+    "n": 0,
+    "conf": null,
+    "acc": null,
+    "gap": null
+   },
+   {
+    "bin": "(0.1,0.2]",
+    "n": 0,
+    "conf": null,
+    "acc": null,
+    "gap": null
+   },
+   {
+    "bin": "(0.2,0.3]",
+    "n": 4,
+    "conf": 0.285,
+    "acc": 0.5,
+    "gap": 0.215
+   },
+   {
+    "bin": "(0.3,0.4]",
+    "n": 43,
+    "conf": 0.374,
+    "acc": 0.3953,
+    "gap": 0.0214
+   },
+   {
+    "bin": "(0.4,0.5]",
+    "n": 125,
+    "conf": 0.4658,
+    "acc": 0.488,
+    "gap": 0.0222
+   },
+   {
+    "bin": "(0.5,0.6]",
+    "n": 197,
+    "conf": 0.5551,
+    "acc": 0.5533,
+    "gap": 0.0018
+   },
+   {
+    "bin": "(0.6,0.7]",
+    "n": 218,
+    "conf": 0.6477,
+    "acc": 0.6468,
+    "gap": 0.0009
+   },
+   {
+    "bin": "(0.7,0.8]",
+    "n": 300,
+    "conf": 0.7553,
+    "acc": 0.75,
+    "gap": 0.0053
+   },
+   {
+    "bin": "(0.8,0.9]",
+    "n": 460,
+    "conf": 0.8649,
+    "acc": 0.8587,
+    "gap": 0.0062
+   },
+   {
+    "bin": "(0.9,1.0]",
+    "n": 3781,
+    "conf": 0.9875,
+    "acc": 0.9617,
+    "gap": 0.0258
+   }
+  ],
+  "confidence_field": {
+   "ECE": 0.0211,
+   "MCE": 0.128,
+   "acc_by_decile": [
+    {
+     "decile": 1,
+     "n": 512,
+     "conf_mean": 0.5241,
+     "acc": 0.5508
+    },
+    {
+     "decile": 2,
+     "n": 513,
+     "conf_mean": 0.7546,
+     "acc": 0.7563
+    },
+    {
+     "decile": 3,
+     "n": 513,
+     "conf_mean": 0.8842,
+     "acc": 0.8772
+    },
+    {
+     "decile": 4,
+     "n": 513,
+     "conf_mean": 0.9515,
+     "acc": 0.8967
+    },
+    {
+     "decile": 5,
+     "n": 513,
+     "conf_mean": 0.979,
+     "acc": 0.9532
+    },
+    {
+     "decile": 6,
+     "n": 512,
+     "conf_mean": 0.99,
+     "acc": 0.957
+    },
+    {
+     "decile": 7,
+     "n": 513,
+     "conf_mean": 0.9976,
+     "acc": 0.9747
+    },
+    {
+     "decile": 8,
+     "n": 513,
+     "conf_mean": 1.0,
+     "acc": 0.9961
+    },
+    {
+     "decile": 9,
+     "n": 513,
+     "conf_mean": 1.0,
+     "acc": 0.9922
+    },
+    {
+     "decile": 10,
+     "n": 513,
+     "conf_mean": 1.0,
+     "acc": 0.9883
+    }
+   ],
+   "monotone_nondecreasing": false,
+   "bins": [
+    {
+     "bin": "(0.0,0.1]",
+     "n": 0,
+     "conf": null,
+     "acc": null,
+     "gap": null
+    },
+    {
+     "bin": "(0.1,0.2]",
+     "n": 0,
+     "conf": null,
+     "acc": null,
+     "gap": null
+    },
+    {
+     "bin": "(0.2,0.3]",
+     "n": 5,
+     "conf": 0.272,
+     "acc": 0.4,
+     "gap": 0.128
+    },
+    {
+     "bin": "(0.3,0.4]",
+     "n": 49,
+     "conf": 0.3665,
+     "acc": 0.3878,
+     "gap": 0.0212
+    },
+    {
+     "bin": "(0.4,0.5]",
+     "n": 151,
+     "conf": 0.4649,
+     "acc": 0.5099,
+     "gap": 0.045
+    },
+    {
+     "bin": "(0.5,0.6]",
+     "n": 199,
+     "conf": 0.5594,
+     "acc": 0.5779,
+     "gap": 0.0185
+    },
+    {
+     "bin": "(0.6,0.7]",
+     "n": 213,
+     "conf": 0.6508,
+     "acc": 0.6667,
+     "gap": 0.0158
+    },
+    {
+     "bin": "(0.7,0.8]",
+     "n": 280,
+     "conf": 0.7514,
+     "acc": 0.7393,
+     "gap": 0.0121
+    },
+    {
+     "bin": "(0.8,0.9]",
+     "n": 514,
+     "conf": 0.862,
+     "acc": 0.8677,
+     "gap": 0.0057
+    },
+    {
+     "bin": "(0.9,1.0]",
+     "n": 3717,
+     "conf": 0.9858,
+     "acc": 0.9626,
+     "gap": 0.0232
+    }
+   ]
+  },
+  "oos": {
+   "n": 851,
+   "acc_oos": 0.7286,
+   "mean_maxprob_oos": 0.808,
+   "mean_confidence_oos": 0.7976,
+   "mean_confidence_inscope": 0.9302,
+   "acc_inscope": 0.9273
+  }
+ },
+ "C3_latency_ms": {
+  "n": 5492,
+  "median": 385.9,
+  "p95": 615.3,
+  "p99": 845.1,
+  "min": 320.7,
+  "max": 9865.3,
+  "note": "observed end-to-end from Plano, TX; includes network"
+ }
+}

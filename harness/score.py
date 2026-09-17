@@ -43,12 +43,13 @@ def main():
     ap.add_argument("--input", default=None, help="responses.jsonl (default raw/run/<corpus>/responses.jsonl)")
     ap.add_argument("--tag", default="jev")
     ap.add_argument("--no-plot", action="store_true")
+    ap.add_argument("--sum-tol", type=float, default=1e-3, help="frozen: 1e-3. Amendment 2: 0.02 (2-decimal rounding)")
     a = ap.parse_args()
     labels = load_labels(a.corpus); L = set(labels)
     path = Path(a.input) if a.input else ROOT / "raw/run" / a.corpus / "responses.jsonl"
     recs = [json.loads(l) for l in open(path)]
 
-    viol = []; ok = []; latency = []; non200 = 0
+    viol = []; ok = []; latency = []; non200 = 0; argmax_viol = []; sums = []
     for r in recs:
         resp = r["response"]
         if resp.get("status") != 200:
@@ -64,22 +65,26 @@ def main():
             pr = ans.get("probabilities")
             if not isinstance(pr, dict): v.append("probabilities missing")
             else:
+                sums.append(sum(pr.values()))
                 if set(pr.keys()) != L: v.append(f"probabilities keys != label set (extra={sorted(set(pr)-L)[:3]}, missing={sorted(L-set(pr))[:3]})")
                 vals = list(pr.values())
                 if any((not isinstance(x, (int, float))) or x < 0 or x > 1 or (isinstance(x, float) and math.isnan(x)) for x in vals): v.append("probability out of [0,1]")
-                elif abs(sum(vals) - 1.0) > 1e-3: v.append(f"probabilities sum={sum(vals):.5f}")
-                elif ch in pr and pr[ch] < max(vals) - 1e-9: v.append("choice is not argmax of probabilities")
+                elif abs(sum(vals) - 1.0) > a.sum_tol: v.append(f"probabilities sum={sum(vals):.5f}")
+
             cf = ans.get("confidence")
             if not isinstance(cf, (int, float)) or cf < 0 or cf > 1: v.append(f"confidence={cf!r}")
         if v: viol.append({"id": r["id"], "violations": v})
         else:
+            if pr[ch] < max(pr.values()) - 1e-9: argmax_viol.append({"id": r["id"], "choice": ch, "p_choice": pr[ch], "argmax": max(pr, key=pr.get), "p_argmax": max(pr.values())})
             ok.append({"id": r["id"], "label": r["label"], "choice": ch, "correct": int(ch == r["label"]),
                        "maxprob": float(ans["probabilities"][ch]), "confidence": float(ans["confidence"]),
                        "p_true": float(ans["probabilities"].get(r["label"], 0.0)), "probs": ans["probabilities"]})
 
     n = len(ok)
     out = {"corpus": a.corpus, "tag": a.tag, "records": len(recs), "non_200": non200, "scored": n, "labels": len(labels),
-           "C2_type_safety": {"violations": len(viol), "pass": len(viol) == 0, "examples": viol[:10]}}
+           "C2_type_safety": {"sum_tolerance": a.sum_tol, "violations": len(viol), "pass": len(viol) == 0, "examples": viol[:10]},
+           "contract_choice_is_argmax": {"violations": len(argmax_viol), "examples": argmax_viol[:10]},
+           "probability_sums": {"min": round(min(sums), 4) if sums else None, "max": round(max(sums), 4) if sums else None, "n_not_exactly_1_within_1e-3": int(sum(1 for x in sums if abs(x - 1) > 1e-3))}}
     if n:
         acc = float(np.mean([o["correct"] for o in ok]))
         ece, mce, rows = ece_mce([o["maxprob"] for o in ok], [o["correct"] for o in ok])

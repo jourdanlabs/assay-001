@@ -1,0 +1,266 @@
+{
+ "corpus": "clinc150",
+ "tag": "jev",
+ "records": 5500,
+ "non_200": 4,
+ "scored": 5496,
+ "labels": 151,
+ "C2_type_safety": {
+  "sum_tolerance": 0.02,
+  "violations": 0,
+  "pass": true,
+  "examples": []
+ },
+ "contract_choice_is_argmax": {
+  "violations": 1,
+  "examples": [
+   {
+    "id": "c150-5151",
+    "choice": "oos",
+    "p_choice": 0.48,
+    "argmax": "taxes",
+    "p_argmax": 0.49
+   }
+  ]
+ },
+ "probability_sums": {
+  "min": 0.99,
+  "max": 1.0,
+  "n_not_exactly_1_within_1e-3": 368
+ },
+ "C1_calibration": {
+  "accuracy": 0.8812,
+  "ECE_maxprob": 0.0204,
+  "MCE_maxprob": 0.06,
+  "Brier_multiclass": 0.1846,
+  "pass_ECE_le_0.05": true,
+  "reliability_bins_maxprob": [
+   {
+    "bin": "(0.0,0.1]",
+    "n": 0,
+    "conf": null,
+    "acc": null,
+    "gap": null
+   },
+   {
+    "bin": "(0.1,0.2]",
+    "n": 0,
+    "conf": null,
+    "acc": null,
+    "gap": null
+   },
+   {
+    "bin": "(0.2,0.3]",
+    "n": 14,
+    "conf": 0.2743,
+    "acc": 0.2143,
+    "gap": 0.06
+   },
+   {
+    "bin": "(0.3,0.4]",
+    "n": 59,
+    "conf": 0.3751,
+    "acc": 0.3898,
+    "gap": 0.0147
+   },
+   {
+    "bin": "(0.4,0.5]",
+    "n": 162,
+    "conf": 0.4603,
+    "acc": 0.4753,
+    "gap": 0.015
+   },
+   {
+    "bin": "(0.5,0.6]",
+    "n": 278,
+    "conf": 0.5526,
+    "acc": 0.5612,
+    "gap": 0.0086
+   },
+   {
+    "bin": "(0.6,0.7]",
+    "n": 279,
+    "conf": 0.6533,
+    "acc": 0.6667,
+    "gap": 0.0134
+   },
+   {
+    "bin": "(0.7,0.8]",
+    "n": 332,
+    "conf": 0.7589,
+    "acc": 0.756,
+    "gap": 0.0029
+   },
+   {
+    "bin": "(0.8,0.9]",
+    "n": 510,
+    "conf": 0.8605,
+    "acc": 0.851,
+    "gap": 0.0095
+   },
+   {
+    "bin": "(0.9,1.0]",
+    "n": 3862,
+    "conf": 0.9863,
+    "acc": 0.9614,
+    "gap": 0.0249
+   }
+  ],
+  "confidence_field": {
+   "ECE": 0.0217,
+   "MCE": 0.062,
+   "acc_by_decile": [
+    {
+     "decile": 1,
+     "n": 549,
+     "conf_mean": 0.49,
+     "acc": 0.5173
+    },
+    {
+     "decile": 2,
+     "n": 550,
+     "conf_mean": 0.7019,
+     "acc": 0.7127
+    },
+    {
+     "decile": 3,
+     "n": 549,
+     "conf_mean": 0.8495,
+     "acc": 0.8525
+    },
+    {
+     "decile": 4,
+     "n": 550,
+     "conf_mean": 0.9297,
+     "acc": 0.9036
+    },
+    {
+     "decile": 5,
+     "n": 550,
+     "conf_mean": 0.9709,
+     "acc": 0.92
+    },
+    {
+     "decile": 6,
+     "n": 549,
+     "conf_mean": 0.9882,
+     "acc": 0.9672
+    },
+    {
+     "decile": 7,
+     "n": 550,
+     "conf_mean": 0.9951,
+     "acc": 0.9618
+    },
+    {
+     "decile": 8,
+     "n": 549,
+     "conf_mean": 1.0,
+     "acc": 0.9927
+    },
+    {
+     "decile": 9,
+     "n": 550,
+     "conf_mean": 1.0,
+     "acc": 0.9945
+    },
+    {
+     "decile": 10,
+     "n": 550,
+     "conf_mean": 1.0,
+     "acc": 0.9891
+    }
+   ],
+   "monotone_nondecreasing": false,
+   "bins": [
+    {
+     "bin": "(0.0,0.1]",
+     "n": 0,
+     "conf": null,
+     "acc": null,
+     "gap": null
+    },
+    {
+     "bin": "(0.1,0.2]",
+     "n": 0,
+     "conf": null,
+     "acc": null,
+     "gap": null
+    },
+    {
+     "bin": "(0.2,0.3]",
+     "n": 15,
+     "conf": 0.262,
+     "acc": 0.2,
+     "gap": 0.062
+    },
+    {
+     "bin": "(0.3,0.4]",
+     "n": 77,
+     "conf": 0.3708,
+     "acc": 0.3896,
+     "gap": 0.0188
+    },
+    {
+     "bin": "(0.4,0.5]",
+     "n": 186,
+     "conf": 0.4638,
+     "acc": 0.4946,
+     "gap": 0.0309
+    },
+    {
+     "bin": "(0.5,0.6]",
+     "n": 270,
+     "conf": 0.5543,
+     "acc": 0.5852,
+     "gap": 0.0309
+    },
+    {
+     "bin": "(0.6,0.7]",
+     "n": 274,
+     "conf": 0.6533,
+     "acc": 0.6825,
+     "gap": 0.0292
+    },
+    {
+     "bin": "(0.7,0.8]",
+     "n": 331,
+     "conf": 0.7572,
+     "acc": 0.7402,
+     "gap": 0.017
+    },
+    {
+     "bin": "(0.8,0.9]",
+     "n": 547,
+     "conf": 0.8596,
+     "acc": 0.8684,
+     "gap": 0.0088
+    },
+    {
+     "bin": "(0.9,1.0]",
+     "n": 3796,
+     "conf": 0.9845,
+     "acc": 0.9623,
+     "gap": 0.0222
+    }
+   ]
+  },
+  "oos": {
+   "n": 1000,
+   "acc_oos": 0.723,
+   "mean_maxprob_oos": 0.7903,
+   "mean_confidence_oos": 0.7799,
+   "mean_confidence_inscope": 0.9176,
+   "acc_inscope": 0.9164
+  }
+ },
+ "C3_latency_ms": {
+  "n": 5492,
+  "median": 385.9,
+  "p95": 615.3,
+  "p99": 845.1,
+  "min": 320.7,
+  "max": 9865.3,
+  "note": "observed end-to-end from Plano, TX; includes network"
+ }
+}
