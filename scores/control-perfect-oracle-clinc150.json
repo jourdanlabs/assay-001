@@ -1,0 +1,248 @@
+{
+ "corpus": "clinc150",
+ "tag": "control-perfect-oracle",
+ "records": 5500,
+ "non_200": 0,
+ "scored": 5500,
+ "labels": 151,
+ "C2_type_safety": {
+  "violations": 0,
+  "pass": true,
+  "examples": []
+ },
+ "C1_calibration": {
+  "accuracy": 1.0,
+  "ECE_maxprob": 0.0,
+  "MCE_maxprob": 0.0,
+  "Brier_multiclass": 0.0,
+  "pass_ECE_le_0.05": true,
+  "reliability_bins_maxprob": [
+   {
+    "bin": "(0.0,0.1]",
+    "n": 0,
+    "conf": null,
+    "acc": null,
+    "gap": null
+   },
+   {
+    "bin": "(0.1,0.2]",
+    "n": 0,
+    "conf": null,
+    "acc": null,
+    "gap": null
+   },
+   {
+    "bin": "(0.2,0.3]",
+    "n": 0,
+    "conf": null,
+    "acc": null,
+    "gap": null
+   },
+   {
+    "bin": "(0.3,0.4]",
+    "n": 0,
+    "conf": null,
+    "acc": null,
+    "gap": null
+   },
+   {
+    "bin": "(0.4,0.5]",
+    "n": 0,
+    "conf": null,
+    "acc": null,
+    "gap": null
+   },
+   {
+    "bin": "(0.5,0.6]",
+    "n": 0,
+    "conf": null,
+    "acc": null,
+    "gap": null
+   },
+   {
+    "bin": "(0.6,0.7]",
+    "n": 0,
+    "conf": null,
+    "acc": null,
+    "gap": null
+   },
+   {
+    "bin": "(0.7,0.8]",
+    "n": 0,
+    "conf": null,
+    "acc": null,
+    "gap": null
+   },
+   {
+    "bin": "(0.8,0.9]",
+    "n": 0,
+    "conf": null,
+    "acc": null,
+    "gap": null
+   },
+   {
+    "bin": "(0.9,1.0]",
+    "n": 5500,
+    "conf": 1.0,
+    "acc": 1.0,
+    "gap": 0.0
+   }
+  ],
+  "confidence_field": {
+   "ECE": 0.0,
+   "MCE": 0.0,
+   "acc_by_decile": [
+    {
+     "decile": 1,
+     "n": 550,
+     "conf_mean": 1.0,
+     "acc": 1.0
+    },
+    {
+     "decile": 2,
+     "n": 550,
+     "conf_mean": 1.0,
+     "acc": 1.0
+    },
+    {
+     "decile": 3,
+     "n": 550,
+     "conf_mean": 1.0,
+     "acc": 1.0
+    },
+    {
+     "decile": 4,
+     "n": 550,
+     "conf_mean": 1.0,
+     "acc": 1.0
+    },
+    {
+     "decile": 5,
+     "n": 550,
+     "conf_mean": 1.0,
+     "acc": 1.0
+    },
+    {
+     "decile": 6,
+     "n": 550,
+     "conf_mean": 1.0,
+     "acc": 1.0
+    },
+    {
+     "decile": 7,
+     "n": 550,
+     "conf_mean": 1.0,
+     "acc": 1.0
+    },
+    {
+     "decile": 8,
+     "n": 550,
+     "conf_mean": 1.0,
+     "acc": 1.0
+    },
+    {
+     "decile": 9,
+     "n": 550,
+     "conf_mean": 1.0,
+     "acc": 1.0
+    },
+    {
+     "decile": 10,
+     "n": 550,
+     "conf_mean": 1.0,
+     "acc": 1.0
+    }
+   ],
+   "monotone_nondecreasing": true,
+   "bins": [
+    {
+     "bin": "(0.0,0.1]",
+     "n": 0,
+     "conf": null,
+     "acc": null,
+     "gap": null
+    },
+    {
+     "bin": "(0.1,0.2]",
+     "n": 0,
+     "conf": null,
+     "acc": null,
+     "gap": null
+    },
+    {
+     "bin": "(0.2,0.3]",
+     "n": 0,
+     "conf": null,
+     "acc": null,
+     "gap": null
+    },
+    {
+     "bin": "(0.3,0.4]",
+     "n": 0,
+     "conf": null,
+     "acc": null,
+     "gap": null
+    },
+    {
+     "bin": "(0.4,0.5]",
+     "n": 0,
+     "conf": null,
+     "acc": null,
+     "gap": null
+    },
+    {
+     "bin": "(0.5,0.6]",
+     "n": 0,
+     "conf": null,
+     "acc": null,
+     "gap": null
+    },
+    {
+     "bin": "(0.6,0.7]",
+     "n": 0,
+     "conf": null,
+     "acc": null,
+     "gap": null
+    },
+    {
+     "bin": "(0.7,0.8]",
+     "n": 0,
+     "conf": null,
+     "acc": null,
+     "gap": null
+    },
+    {
+     "bin": "(0.8,0.9]",
+     "n": 0,
+     "conf": null,
+     "acc": null,
+     "gap": null
+    },
+    {
+     "bin": "(0.9,1.0]",
+     "n": 5500,
+     "conf": 1.0,
+     "acc": 1.0,
+     "gap": 0.0
+    }
+   ]
+  },
+  "oos": {
+   "n": 1000,
+   "acc_oos": 1.0,
+   "mean_maxprob_oos": 1.0,
+   "mean_confidence_oos": 1.0,
+   "mean_confidence_inscope": 1.0,
+   "acc_inscope": 1.0
+  }
+ },
+ "C3_latency_ms": {
+  "n": 5500,
+  "median": 100.0,
+  "p95": 100.0,
+  "p99": 100.0,
+  "min": 100.0,
+  "max": 100.0,
+  "note": "observed end-to-end from Plano, TX; includes network"
+ }
+}
